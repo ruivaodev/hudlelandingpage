@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: hsl(257, 40%, 49%);
+  background-image: url("./assets/bg-desktop.svg");
+  background-repeat: no-repeat;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  border: 1px solid red;
+  height: 200px;
+}
+
+.logo {
+  margin: 40px 0 0 35px;
+}
+
+.lado-a {
+  flex: 1;
+  border: 1px solid red;
+  margin: 30px 0 0 35px;
+}
+
+#card {
+ width: 730px;
+ height: 550px;
+}
+
+
+.lado-b {
+  flex: 1;
+  border: 1px solid #000;
+}
+
+
+.fundo {
+  display: flex;
+}
+.cards {
+  display: flex;
+  align-items: center;
+  position: absolute;
+}
