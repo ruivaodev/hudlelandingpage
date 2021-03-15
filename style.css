@@ -1,5 +1,5 @@
-@import url ('https://fonts.googleapis.com/css2? family = Abrir + Sans & family = Poppins: wght @ 400; 700 & display = swap');
-@import url ('https://fonts.googleapis.com/css2? family = Abrir + Sans & display = swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -26,6 +26,10 @@ h1 {
   font-family: 'Poppins', sans-serif;
 }
 
+p {
+  opacity: 0.8;
+}
+
 img {
   max-width: 100%;
 }
@@ -38,18 +42,16 @@ img {
 
 .flex {
   display: flex;
-}
-
-.flex > div {
-  flex:1;
-
+  margin: 50px 0;
 }
 
 .flex > div:first-child{
+  flex:0.6;
   margin-right:20px
 }
 
 .flex > div:last-child{
+  flex: 0.4;
   margin-left:20px
 }
 
@@ -62,6 +64,7 @@ button {
   padding: 20px 80px;
   margin-top: 20px;
   box-shadow: 0 5px 10px rgba(0,0,0,3);
+  cursor: pointer;
 }
 
 .links {
@@ -69,5 +72,18 @@ button {
   justify-content: flex-end;
   padding: 0;
   list-style-type: none;
+}
+
+.links a {
+  border-radius: 50%;
+  border: 2px solid #fff;
+  color: #fff;
+  height: 50px;
+  width:50px;
+  display:inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+
 }
 
