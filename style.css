@@ -6,10 +6,15 @@
   box-sizing: border-box;
 }
 
+:root {
+  --violeta: hsl(257, 40%, 49%);
+  --rosa: hsl(300, 69%, 71%);
+}
+
 body {
   width: 100vw;
   height: 100vh;
-  background-color: hsl(257, 40%, 49%);
+  background-color: var(--violeta);
   color:#fff;
   font-size: 1.4em;
   background-image: url("./assets/bg-desktop.svg");
@@ -31,7 +36,7 @@ p {
 }
 
 img {
-  max-width: 100%;
+  max-width: 90%;
 }
 
 .container {
@@ -40,24 +45,24 @@ img {
   width: 1200px;
 }
 
-.flex {
+.center {
   display: flex;
-  margin: 50px 0;
+  margin: 100px 0;
 }
 
-.flex > div:first-child{
+.center > div:first-child{
   flex:0.6;
   margin-right:20px
 }
 
-.flex > div:last-child{
+.center > div:last-child{
   flex: 0.4;
   margin-left:20px
 }
 
 button {
   background-color: #fff;
-  color:hsl(257, 40%, 49%);
+  color:var(--violeta);
   border-radius: 50px;
   border:none;
   font-size: 20px;
@@ -66,7 +71,12 @@ button {
   box-shadow: 0 5px 10px rgba(0,0,0,3);
   cursor: pointer;
 }
-
+button:hover{
+  color:var(--violeta);
+  border-color: var(--rosa);
+  background-color: var(--rosa);
+ 
+}
 .links {
   display: flex;
   justify-content: flex-end;
@@ -77,6 +87,7 @@ button {
 .links a {
   border-radius: 50%;
   border: 2px solid #fff;
+  margin: 8px;
   color: #fff;
   height: 50px;
   width:50px;
@@ -86,4 +97,30 @@ button {
   text-decoration: none;
 
 }
+.links a:hover {
+  color:var(--rosa);
+ border-color: var(--rosa);
 
+}
+
+
+@media screen and (max-width:768px) {
+  .center {
+    flex-direction: column;
+    margin: 50px 0;
+  }
+
+  .center > div:first-child{
+    flex:0.6;
+    margin-right:0;
+  }
+  
+  .center > div:last-child{
+    flex: 1;
+    margin-left:0;
+    text-align: center;
+  }
+  .links {
+    justify-content: center;
+  }
+}
